@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background: #eee;
+}
+
+//setups
+$transition: .3s ease;
+$oicolor: #e03d6f;
+$desktop: 'min-width: 520px';
+
+//utilities
+.strong {
+  font-weight: 700;
+}
+
+.muted {
+  opacity: .5 !important;
+}
+
+.wraped {
+  padding: .5rem !important;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.flex-col, .flex-row {
+  display: flex !important;
+  .strech {
+    flex-grow: 1 !important;
+  }
+  .space-around {
+    justify-content: space-around !important;
+  }
+}
+
+.flex-col {
+  flex-direction: column !important;
+  margin: .5rem 0 !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+  padding: 0 .5rem !important;
+}
+
+.onlysmall {
+  display: inherit !important;
+  @media only screen and ($desktop) {
+  display: none !important;
+  }
+}
+
+.onlylarge {
+  display: none !important;
+  @media only screen and ($desktop) {
+  display: inherit !important;
+  }
+}
+
+// spacing
+$list: 'p' 'padding', 'm' 'margin';
+
+@each $prop in $list {
+    @for $i from 0 through 10 {
+        //top
+        .#{nth($prop, 1)}t-#{$i} {
+            #{nth($prop, 2)}-top: #{$i}rem !important;
+        }
+        //bottom
+        .#{nth($prop, 1)}b-#{$i} {
+            #{nth($prop, 2)}-bottom: #{$i}rem !important;
+        }
+        //left
+        .#{nth($prop, 1)}l-#{$i} {
+            #{nth($prop, 2)}-left: #{$i}rem !important;
+        }
+        //right
+        .#{nth($prop, 1)}r-#{$i} {
+            #{nth($prop, 2)}-right: #{$i}rem !important;
+        }
+        // x-axis
+        .#{nth($prop, 1)}x-#{$i} {
+            #{nth($prop, 2)}-left: #{$i}rem !important;
+            #{nth($prop, 2)}-right: #{$i}rem !important;
+        }
+        // y-axis
+        .#{nth($prop, 1)}y-#{$i} {
+            #{nth($prop, 2)}-top: #{$i}rem !important;
+            #{nth($prop, 2)}-bottom: #{$i}rem !important;
+        }
+        // all!
+        .#{nth($prop, 1)}-#{$i} {
+            #{nth($prop, 2)}: #{$i}rem !important;
+        }
+    }    
+}
+
+//end
+
+//component
+.c-fatura {
+  //styles for mobile first
+  a {
+    color: $oicolor;
+  }
+
+  nav {
+    text-align: center;
+    height: 2rem;
+    label {
+      border-bottom: 2px solid #dbdbdb
+    }
+  }
+
+  article {
+    background: #fff;
+    border-radius: 2px;
+  }
+
+  input[type=radio] {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  //interaction
+  .ctn1,
+  .ctn2,
+  .ctn3 {
+    display: none !important;
+    height: 0;
+    opacity: 0;
+  }
+
+  .opt1:checked ~ section .ctn1,
+  .opt2:checked ~ section .ctn2,
+  .opt3:checked ~ section .ctn3 {
+    height: auto;
+    opacity: 1;
+    transition: $transition;
+    display: inherit !important;
+  }
+
+  .opt1:checked ~ nav > .lb1,
+  .opt2:checked ~ nav > .lb2,
+  .opt3:checked ~ nav > .lb3 {
+    color: $oicolor;
+    cursor: default;
+    border-color: $oicolor;
+    transition: $transition;
+  }
+}

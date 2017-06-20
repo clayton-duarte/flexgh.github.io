@@ -49,13 +49,13 @@ hr {
 
 .flex-col, .flex-row {
   display: flex !important;
-  
+
   @for $i from 0 through 10 {
         .size-#{$i} {
             flex-grow: #{$i} !important;
         }
     }
-  .space-around {
+  .center {
     justify-content: space-around !important;
   }
 }

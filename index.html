@@ -5,11 +5,11 @@
         <title>FleXGH Documentation</title>
         <link href="flexgh.css" rel="stylesheet">
     </head>
-    <body>
+    <body class="flex-col">
         <header class="flex-col">
             <nav class="flex-row">
                 <span class="flex-row strong">FleXGH</span>
-                <ul class="flex-row strech space-around">
+                <ul class="flex-row size-1 space-around">
                     <li>item 1</li>
                     <li>item 2</li>
                     <li>item 3</li>
@@ -18,11 +18,20 @@
                 </ul>
             </nav>
         </header>
+        <section class="flex-row bg-highlight p-5">
+            <h1 class="flex-row space-arround">FleXGH Documentation</h1>            
+        </section>
         <section class="flex-row">
-            <aside class="flex-col"></aside>
-            <article class="flex-col">
-                <h1 class="flex-row">FleXGH Documentation</h1>
-                <p class="flex-row">My first paragraph.</p>
+            <aside class="flex-col size-1">
+                <nav class="flex-row">
+                    <ul class="flex-col">
+                        <li><a href="#">Intro</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <article class="flex-col size-4">
+                <sumary class="flex-row">Intro</sumary>
+                <detail class="flex-row muted">My first paragraph.</detail>
             </article>
         </section>
         <footer class="flex-col">

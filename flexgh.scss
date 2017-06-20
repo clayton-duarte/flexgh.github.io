@@ -52,11 +52,17 @@ hr {
 
   @for $i from 0 through 10 {
         .size-#{$i} {
-            flex-grow: #{$i} !important;
+            flex: #{$i} 1 auto !important;
         }
     }
   .center {
     justify-content: space-around !important;
+  }
+  .start {
+    justify-content: flex-start !important;
+  }
+  .end {
+    justify-content: flex-end !important;
   }
 }
 

@@ -4,18 +4,25 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i');
 
 //setups
-$I: '!important';
+$I: !important;
 $transition: .3s ease;
 $desktop: 'min-width: 520px';
-
+$crossplatform: '', '-moz-', '-webkit-';
 $danger: #FFAAA5;
 $warning: #FFD3B6;
 $info: #A8E6CF;
 $success: #DCEDC1;
 
+//mixins
+@mixin cross($prop, $val) {
+  @each $plataform in $crossplatform {
+   $prop: #{$plataform}#{$val};
+  }      
+}
+
 // globals
 * {
-  display: flex $I;
+  @include cross(display, flex);
   margin: 0 $I;
 }
 
@@ -64,8 +71,6 @@ hr {
 }
 
 .flex-col, .flex-row {
-  display: flex $I;
-
   @for $i from 0 through 10 {
         .size-#{$i} {
             flex: #{$i} 1 auto $I;

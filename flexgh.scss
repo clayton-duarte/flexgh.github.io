@@ -54,11 +54,11 @@ ul, ol {
 
 @each $c in $colors {
   .#{nth($c, 1)} {
-    color: darken(#{nth($c, 2)}, 25) $I;
+    color: #{nth($c, 2)} $I;
     border-color: #{nth($c, 2)} $I;
   }
   a.#{nth($c, 1)}:hover {
-    color: darken(#{nth($c, 2)}, 50) $I;
+    color: #{nth($c, 2)} $I;
   }
   .bg-#{nth($c, 1)} {
     background-color: #{nth($c, 2)} $I;

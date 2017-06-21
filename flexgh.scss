@@ -15,6 +15,7 @@ $colors:
   'danger' '#FFAAA5', 
   'blank' '#eee',
   'dark' '#333';
+$info: #{nth(#{nth($colors, 2), 2);
 
 //mixins
 @mixin cross($prop, $val) {

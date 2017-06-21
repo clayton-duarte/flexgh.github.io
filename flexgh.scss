@@ -8,10 +8,12 @@ $I: !important;
 $transition: .3s ease;
 $desktop: 'min-width: 520px';
 $crossplat: '', '-moz-', '-webkit-';
-$danger: #FFAAA5;
-$warning: #FFD3B6;
-$info: #A8E6CF;
-$success: #DCEDC1;
+$colors: 
+  'success' '#DCEDC1', 
+  'info' '#A8E6CF', 
+  'warning' '#FFD3B6', 
+  'danger' '#FFAAA5', 
+  'blank' '#eee';
 
 //mixins
 @mixin cross($prop, $val) {
@@ -47,7 +49,7 @@ ul, ol {
 }
 
 //utilities
-$colors: 'success' $success, 'info' $info, 'warning' $warning, 'danger' $danger;
+
 @each $c in $colors {
   .#{nth($c, 1)} {
     color: #{nth($c, 2)} $I;

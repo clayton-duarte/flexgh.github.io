@@ -22,7 +22,7 @@ $success: #DCEDC1;
 
 // globals
 body * {
-  @include cross(display, flex);
+  @include cross('display', 'flex');
   margin: 0 $I;
 }
 

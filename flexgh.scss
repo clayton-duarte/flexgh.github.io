@@ -13,7 +13,7 @@ $colors:
   info #A8E6CF, 
   warning #FFD3B6, 
   danger #FFAAA5, 
-  blank #eee,
+  blank #fff,
   dark #333;
 $info: #{nth(nth($colors, 2), 2)};
 

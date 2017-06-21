@@ -39,10 +39,10 @@ ul, ol {
 $colors: 'success', 'info', 'warning', 'danger';
 @each $c in $colors {
   .#{$c} {
-    color: $#{$c} $I;
+    color: #{'$'+$c} $I;
   }
   .bg-#{$c} {
-    background-color: #{$c} $I;
+    background-color: #{'$'+$c} $I;
   }
 }
 

@@ -3,17 +3,27 @@
 //imports
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i');
 
+//setups
+$I: '!important';
+$transition: .3s ease;
+$desktop: 'min-width: 520px';
+
+$danger: #FFAAA5;
+$warning: #FFD3B6;
+$info: #A8E6CF;
+$success: #DCEDC1;
+
 // globals
 * {
-  display: flex !important;
-  margin: 0 !important;
+  display: flex $I;
+  margin: 0 $I;
 }
 
 body {
   font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
   color: #333;
-  background: rgb(254, 254, 254);
+  background: #fefefe;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -25,22 +35,27 @@ ul, ol {
   list-style: none;
 }
 
-//setups
-$transition: .3s ease;
-$oicolor: #e03d6f;
-$desktop: 'min-width: 520px';
-
 //utilities
+$colors: 'success', 'info', 'warning', 'danger';
+@each $c in $colors {
+  .#{$c} {
+    color: $#{$c} $I;
+  }
+  .bg-#{$c} {
+    background-color: #{$c} $I;
+  }
+}
+
 .strong {
   font-weight: 700;
 }
 
 .muted {
-  opacity: .5 !important;
+  opacity: .5 $I;
 }
 
 .wrap {
-  padding: .5rem !important;
+  padding: .5rem $I;
 }
 
 hr {
@@ -49,45 +64,45 @@ hr {
 }
 
 .flex-col, .flex-row {
-  display: flex !important;
+  display: flex $I;
 
   @for $i from 0 through 10 {
         .size-#{$i} {
-            flex: #{$i} 1 auto !important;
+            flex: #{$i} 1 auto $I;
         }
     }
   .center {
-    justify-content: space-around !important;
+    justify-content: space-around $I;
   }
   .start {
-    justify-content: flex-start !important;
+    justify-content: flex-start $I;
   }
   .end {
-    justify-content: flex-end !important;
+    justify-content: flex-end $I;
   }
 }
 
 .flex-col {
-  flex-direction: column !important;
-  margin: .5rem 0 !important;
+  flex-direction: column $I;
+  margin: .5rem 0 $I;
 }
 
 .flex-row {
-  flex-direction: row !important;
-  padding: 0 .5rem !important;
+  flex-direction: row $I;
+  padding: 0 .5rem $I;
 }
 
 .onlysmall {
-  display: inherit !important;
+  display: inherit $I;
   @media only screen and ($desktop) {
-  display: none !important;
+  display: none $I;
   }
 }
 
 .onlylarge {
-  display: none !important;
+  display: none $I;
   @media only screen and ($desktop) {
-  display: inherit !important;
+  display: inherit $I;
   }
 }
 
@@ -98,33 +113,33 @@ $list: 'p' 'padding', 'm' 'margin';
     @for $i from 0 through 10 {
         //top
         .#{nth($prop, 1)}t-#{$i} {
-            #{nth($prop, 2)}-top: #{$i}rem !important;
+            #{nth($prop, 2)}-top: #{$i}rem $I;
         }
         //bottom
         .#{nth($prop, 1)}b-#{$i} {
-            #{nth($prop, 2)}-bottom: #{$i}rem !important;
+            #{nth($prop, 2)}-bottom: #{$i}rem $I;
         }
         //left
         .#{nth($prop, 1)}l-#{$i} {
-            #{nth($prop, 2)}-left: #{$i}rem !important;
+            #{nth($prop, 2)}-left: #{$i}rem $I;
         }
         //right
         .#{nth($prop, 1)}r-#{$i} {
-            #{nth($prop, 2)}-right: #{$i}rem !important;
+            #{nth($prop, 2)}-right: #{$i}rem $I;
         }
         // x-axis
         .#{nth($prop, 1)}x-#{$i} {
-            #{nth($prop, 2)}-left: #{$i}rem !important;
-            #{nth($prop, 2)}-right: #{$i}rem !important;
+            #{nth($prop, 2)}-left: #{$i}rem $I;
+            #{nth($prop, 2)}-right: #{$i}rem $I;
         }
         // y-axis
         .#{nth($prop, 1)}y-#{$i} {
-            #{nth($prop, 2)}-top: #{$i}rem !important;
-            #{nth($prop, 2)}-bottom: #{$i}rem !important;
+            #{nth($prop, 2)}-top: #{$i}rem $I;
+            #{nth($prop, 2)}-bottom: #{$i}rem $I;
         }
         // all!
         .#{nth($prop, 1)}-#{$i} {
-            #{nth($prop, 2)}: #{$i}rem !important;
+            #{nth($prop, 2)}: #{$i}rem $I;
         }
     }    
 }
@@ -163,7 +178,7 @@ $list: 'p' 'padding', 'm' 'margin';
   .ctn1,
   .ctn2,
   .ctn3 {
-    display: none !important;
+    display: none $I;
     height: 0;
     opacity: 0;
   }
@@ -174,7 +189,7 @@ $list: 'p' 'padding', 'm' 'margin';
     height: auto;
     opacity: 1;
     transition: $transition;
-    display: inherit !important;
+    display: inherit $I;
   }
 
   .opt1:checked ~ nav > .lb1,

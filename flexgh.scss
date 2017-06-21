@@ -21,7 +21,7 @@ $success: #DCEDC1;
 }
 
 // globals
-* {
+body * {
   @include cross(display, flex);
   margin: 0 $I;
 }
@@ -43,13 +43,13 @@ ul, ol {
 }
 
 //utilities
-$colors: 'success', 'info', 'warning', 'danger';
+$colors: 'success' $success, 'info' $info, 'warning' $warning, 'danger' $danger;
 @each $c in $colors {
-  .#{$c} {
-    color: #{'$'+$c} $I;
+  .#{nth($c, 1)} {
+    color: #{nth($c, 2)} $I;
   }
-  .bg-#{$c} {
-    background-color: #{'$'+$c} $I;
+  .bg-#{nth($c, 1)} {
+    background-color: #{nth($c, 2)} $I;
   }
 }
 

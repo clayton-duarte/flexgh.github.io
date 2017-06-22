@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        title FleXGH Documentation
+        link(href='css/flexgh.css' rel='stylesheet')
+    body.col
+        header.col.wrap.bg-danger
+            nav.row.ghost.center
+                a.row.strong.size-1.start(href='#')
+                    strong FleXGH
+                ul.row.size-10.center
+                    each val in ['Docs', 'Install', 'Author', 'Contact']
+                        li
+                            a(href='#')=val
+        section.row.bg-danger.p-5.muted.center
+            h1 FleXGH Documentation
+        section.row
+            aside.col.size-1.end.danger
+                nav.row
+                    ul.col
+                        each val in ['intro', 'position', 'space', 'grid', 'list', 'text', 'color', 'links', 'header', 'flex then all']
+                            li
+                            - var link = '#' + val;
+                                a(href=link)=val
+            article.col.size-10
+                section#intro
+                    header.col
+                        sumary.row Intro
+                        detail.row.muted Flex everything!
+        section
+        footer.col.center
+            nav
+                small.bg-danger.ghost.wrap flexgh - going horse on flex-box

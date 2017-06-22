@@ -22,17 +22,11 @@ $colors:
   danger tomato,
   ghost ghostwhite,
   dark #333;
-$info: #{nth(nth($colors, 2), 2)};
-//mixins
-@mixin cross($prop, $val) {
-  @each $plataform in $crossplat {
-   #{$plataform}#{$prop}: #{$val} #{$I};
-  }      
-}
 
 //GLOBALS
 body *:not(script) {
-  @include cross('display', 'flex');
+  display: flex;
+  flex: 1 1 auto;
   padding: 0 $I;
   margin: 0 $I;
 }
@@ -97,7 +91,7 @@ header detail {
   padding: .5rem $I;
 }
 //grid
-.flex-col, .flex-row {
+.col, .row {
   @for $i from 0 through 10 {
         .size-#{$i} {
             flex: #{$i} 1 auto $I;
@@ -113,11 +107,11 @@ header detail {
 .end * {
   justify-content: flex-end $I;
 }
-.flex-col {
+.col {
   flex-direction: column $I;
   margin: 1rem 0 $I;
 }
-.flex-row {
+.row {
   flex-direction: row $I;
   align-items: baseline $I;
   padding: 0 1rem $I;

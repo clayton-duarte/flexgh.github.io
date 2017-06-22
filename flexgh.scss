@@ -1,5 +1,20 @@
 ---
 ---
+
+/*
+
+#fleXGH#
+Author: Clayton Duarte
+Organization: fleXGH
+Contributors: 
+  Clayton Duarte :ant:
+Sites: 
+  http://flexgh.github.io, 
+  http://flexgh.us
+Created: 06.2017
+
+*/
+
 //imports
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i');
 
@@ -46,8 +61,8 @@ ul, ol {
   list-style: none;
 }
 
-//utilities
-
+//UTILITIES
+//colors
 @each $c in $colors {
   .#{nth($c, 1)} {
     color: #{nth($c, 2)} $I;
@@ -125,7 +140,6 @@ hr {
 
 // spacing
 $list: 'p' 'padding', 'm' 'margin';
-
 @each $prop in $list {
     @for $i from 0 through 10 {
         //top
@@ -160,5 +174,4 @@ $list: 'p' 'padding', 'm' 'margin';
         }
     }    
 }
-
-//end
+//END

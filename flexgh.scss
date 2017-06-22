@@ -21,11 +21,11 @@ $transition: .3s ease;
 $desktop: 'min-width: 520px';
 $crossplat: '', '-moz-', '-webkit-';
 $colors:
-  success #A1DE93,
-  info #70A1D7,
-  warning #FCE38A,
-  danger #F47C7C,
-  blank #FEFEFE,
+  success limegreen,
+  info royalblue,
+  warning gold,
+  danger tomato,
+  ghost ghostwhite,
   dark #333;
 $info: #{nth(nth($colors, 2), 2)};
 //mixins
@@ -38,13 +38,14 @@ $info: #{nth(nth($colors, 2), 2)};
 //GLOBALS
 body * {
   @include cross('display', 'flex');
+  padding: 0 $I;
   margin: 0 $I;
 }
 body {
   font-family: 'Ubuntu', sans-serif;
   color: #333 $I;
   font-size: 20px;
-  background: #FEFEFE;
+  background: ghostwhite;
 }
 //texts
 p, h1, h2, h3, h4, h5, h6 {
@@ -69,7 +70,7 @@ hr {
   border-bottom: 1px solid #333;
 }
 header sumary {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 header detail {
   opacity: .7;
@@ -87,6 +88,7 @@ header detail {
   }
   .bg-#{nth($c, 1)} {
     background-color: #{nth($c, 2)} $I;
+    color: ghostwhite $I;
   }
 }
 //etc
@@ -107,13 +109,13 @@ header detail {
         }
     }
 }
-.center {
+.center * {
   justify-content: space-around $I;
 }
-.start {
+.start * {
   justify-content: flex-start $I;
 }
-.end {
+.end * {
   justify-content: flex-end $I;
 }
 .flex-col {
@@ -122,6 +124,7 @@ header detail {
 }
 .flex-row {
   flex-direction: row $I;
+  align-items: baseline $I;
   padding: 0 1rem $I;
 }
 .onlysmall {

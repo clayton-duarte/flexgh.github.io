@@ -68,6 +68,12 @@ hr {
   border: 0;
   border-bottom: 1px solid #333;
 }
+header sumary {
+  font-size: 1.5rem;
+}
+header detail {
+  opacity: .7;
+}
 
 //UTILITIES
 //colors
@@ -76,7 +82,7 @@ hr {
     color: #{nth($c, 2)} $I;
     border-color: #{nth($c, 2)} $I;
   }
-  a.#{nth($c, 1)} {
+  a.#{nth($c, 1)}, .#{nth($c, 1)} a {
     color: #{nth($c, 2)} $I;
   }
   .bg-#{nth($c, 1)} {

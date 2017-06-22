@@ -2,17 +2,15 @@
 ---
 
 /*
-
-#fleXGH#
-Author: Clayton Duarte
-Organization: fleXGH
-Contributors: 
-  Clayton Duarte :ant:
-Sites: 
-  http://flexgh.github.io, 
-  http://flexgh.us
-Created: 06.2017
-
+> #fleXGH#
+> Author: Clayton Duarte
+> Organization: fleXGH
+> Contributors:
+  > Clayton Duarte :ant:
+> Sites:  
+  > http://flexgh.us
+  > https://github.com/flexgh
+> Created: 06.2017
 */
 
 //imports
@@ -42,19 +40,27 @@ $info: #{nth(nth($colors, 2), 2)};
 // globals
 body * {
   @include cross('display', 'flex');
+  color: #333 $I;
   margin: 0 $I;
 }
 
 body {
   font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
-  color: #333;
   background: #FEFEFE;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-weight: normal;
+}
+
+a:focus, a:active, a:visited {
+  opacity: .9 $I;
+}
+
+a:hover, button:hover {
+  opacity: .7 $I;
 }
 
 ul, ol {
@@ -65,7 +71,9 @@ ul, ol {
 //colors
 @each $c in $colors {
   .#{nth($c, 1)} {
-    color: #{nth($c, 2)} $I;
+    * {
+      color: #{nth($c, 2)} $I;
+    }
     border-color: #{nth($c, 2)} $I;
   }
   a.#{nth($c, 1)}:hover {
@@ -75,9 +83,7 @@ ul, ol {
     background-color: #{nth($c, 2)} $I;
   }
 }
-a:hover, button:hover {
-  opacity: .7 $I;
-}
+
 //etc
 .strong {
   font-weight: 700;

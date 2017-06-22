@@ -8,12 +8,12 @@ $I: !important;
 $transition: .3s ease;
 $desktop: 'min-width: 520px';
 $crossplat: '', '-moz-', '-webkit-';
-$colors: 
-  success #DCEDC1, 
-  info #A8E6CF, 
-  warning #FFD3B6, 
-  danger #FFAAA5, 
-  blank #fff,
+$colors:
+  success #A1DE93,
+  info #70A1D7,
+  warning #FCE38A,
+  danger #F47C7C,
+  blank #FEFEFE,
   dark #333;
 $info: #{nth(nth($colors, 2), 2)};
 
@@ -34,16 +34,12 @@ body {
   font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
   color: #333;
-  background: #fefefe;
+  background: #FEFEFE;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-weight: normal;
-}
-
-a {
-  color: $info $I;
 }
 
 ul, ol {
@@ -64,7 +60,10 @@ ul, ol {
     background-color: #{nth($c, 2)} $I;
   }
 }
-
+a:hover, button:hover {
+  opacity: .7 $I;
+}
+//etc
 .strong {
   font-weight: 700;
 }
@@ -81,22 +80,23 @@ hr {
   border: 0;
   border-bottom: 1px solid #dbdbdb;
 }
-
+//grid
 .flex-col, .flex-row {
   @for $i from 0 through 10 {
         .size-#{$i} {
             flex: #{$i} 1 auto $I;
         }
     }
-  .center {
-    justify-content: space-around $I;
-  }
-  .start {
-    justify-content: flex-start $I;
-  }
-  .end {
-    justify-content: flex-end $I;
-  }
+}
+
+.center {
+  justify-content: space-around $I;
+}
+.start {
+  justify-content: flex-start $I;
+}
+.end {
+  justify-content: flex-end $I;
 }
 
 .flex-col {

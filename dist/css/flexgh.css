@@ -175,9 +175,6 @@ a.dark,
   -webkit-box-direction: normal !important;
       -ms-flex-direction: row !important;
           flex-direction: row !important;
-  -webkit-box-align: baseline !important;
-      -ms-flex-align: baseline !important;
-          align-items: baseline !important;
   padding: 0 1rem !important; }
 
 .col .size-0,
@@ -259,12 +256,6 @@ a.dark,
   -webkit-box-pack: end !important;
       -ms-flex-pack: end !important;
           justify-content: flex-end !important; }
-
-.onlylarge {
-  display: inherit !important; }
-
-.onlysmall {
-  display: none !important; }
 
 .pt-0 {
   padding-top: 0rem !important; }
@@ -772,13 +763,41 @@ a.dark,
 .m-10 {
   margin: 10rem !important; }
 
-@media only screen and (max-width: 420px) {
-  .row {
+@media only screen and (max-width: 320px) {
+  .small.row {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important; }
-  .onlylarge {
-    display: none !important; }
-  .onlysmall {
-    display: inherit !important; } }
+    .small.row * {
+      -webkit-box-flex: 1 !important;
+          -ms-flex: 1 1 auto !important;
+              flex: 1 1 auto !important; }
+  .hidesmall {
+    display: none !important; } }
+
+@media only screen and (max-width: 768px) {
+  .medium.row {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important; }
+    .medium.row * {
+      -webkit-box-flex: 1 !important;
+          -ms-flex: 1 1 auto !important;
+              flex: 1 1 auto !important; }
+  .hidemedium {
+    display: none !important; } }
+
+@media only screen and (max-width: 1024px) {
+  .large.row {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important; }
+    .large.row * {
+      -webkit-box-flex: 1 !important;
+          -ms-flex: 1 1 auto !important;
+              flex: 1 1 auto !important; }
+  .hidelarge {
+    display: none !important; } }

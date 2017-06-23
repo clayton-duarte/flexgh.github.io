@@ -6,20 +6,20 @@ html(lang="en")
     link(href='css/flexgh.css' rel='stylesheet')
   body.col
     header.col.wrap.bg-dark
-      nav.row.ghost.center
+      nav.small.row.ghost.center
         a.row.strong.size-1.start(href='#')
-          strong.danger FleXGH
-        ul.row.size-10.center
+          strong.danger fleXGH
+        ul.medium.row.size-10.center
           each val in ['Install', 'Docs', 'Author', 'Contact']
             li
               a(href='#')=val
-    section.row.bg-danger.p-5.center
+    section.hidesmall.row.bg-danger.p-5.center
       h1 FleXGH Documentation
-    section.row
+    section.small.row
       aside.col.size-1.end.danger.br
         nav.row
           ul.col
-            each val in ['intro', 'position', 'space', 'grid', 'list', 'text', 'color', 'links', 'header', 'responsive']
+            each val in ['intro', 'position', 'space', 'grid', 'list', 'text', 'color', 'borders', 'links', 'header', 'responsive']
               -var link = '#' + val;
               li
                 a(href=link)=val
@@ -27,7 +27,7 @@ html(lang="en")
         section#intro.col
           header.col
             sumary.row Intro
-            detail.row.pb-1.bb.muted Flex everything!
+            detail.row.bb.muted Flex everything!
           main.row
             p paragraph
           footer

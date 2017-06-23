@@ -16,7 +16,6 @@ warning gold,
 danger tomato,
 ghost ghostwhite,
 dark #333;
-$small: "max-width: 420px";
 //GLOBALS
 body *:not(script) {
   flex: 1 1 auto;
@@ -127,7 +126,6 @@ $borders: (b (border)),
 
 .row {
   flex-direction: row $I;
-  align-items: baseline $I;
   padding: 0 1rem $I;
 }
 
@@ -153,13 +151,7 @@ $borders: (b (border)),
   justify-content: flex-end $I;
 }
 
-.onlylarge {
-  display: inherit $I;
-}
-
-.onlysmall {
-  display: none $I;
-} //spacing
+//spacing
 $list: 'p' 'padding',
 'm' 'margin';
 @each $prop in $list {
@@ -190,14 +182,22 @@ $list: 'p' 'padding',
     }
   }
 } //BREAKPOINTS
-@media only screen and ($small) {
-  .row {
-    flex-direction: column $I;
+$breakpoints: //
+('small' "max-width:320px"),
+('medium' "max-width:768px"),
+('large' "max-width:1024px");
+@each $display in $breakpoints {
+  @media only screen and (#{nth($display, 2)}) {
+    .#{nth($display, 1)}.row {
+      flex-direction: column $I;
+      * {
+        flex: 1 1 auto $I;
+      }
+    }
+    .hide#{nth($display, 1)} {
+      display: none $I;
+    }
   }
-  .onlylarge {
-    display: none $I;
-  }
-  .onlysmall {
-    display: inherit $I;
-  }
-} //END
+}
+
+//END

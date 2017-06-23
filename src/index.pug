@@ -5,21 +5,21 @@ html(lang="en")
     title FleXGH Documentation
     link(href='css/flexgh.css' rel='stylesheet')
   body.col
-    header.col.wrap.bg-danger
+    header.col.wrap.bg-dark
       nav.row.ghost.center
         a.row.strong.size-1.start(href='#')
-          strong FleXGH
+          strong.danger FleXGH
         ul.row.size-10.center
-          each val in ['Docs', 'Install', 'Author', 'Contact']
+          each val in ['Install', 'Docs', 'Author', 'Contact']
             li
               a(href='#')=val
-    section.row.bg-danger.p-5.muted.center
+    section.row.bg-danger.p-5.center
       h1 FleXGH Documentation
     section.row
       aside.col.size-1.end.danger
         nav.row
           ul.col
-            each val in ['intro', 'position', 'space', 'grid', 'list', 'text', 'color', 'links', 'header', 'flex then all']
+            each val in ['intro', 'position', 'space', 'grid', 'list', 'text', 'color', 'links', 'header', 'responsive']
               -var link = '#' + val;
               li
                 a(href=link)=val
@@ -33,4 +33,4 @@ html(lang="en")
     section
     footer.col.center
       nav
-        small.bg-danger.ghost.wrap flexgh - going horse on flex-box
+        small.bg-dark.ghost.wrap flexgh - going horse on flex-box

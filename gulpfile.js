@@ -25,8 +25,12 @@ gulp.task('pug', function buildHTML() {
 
 gulp.task('serve', ['sass', 'pug'], function () {
     browserSync.init({
-        server: "dist",
-        browser: "opera"
+        server: {
+            baseDir: "dist",
+            serveStaticOptions: {
+                extensions: ["html"]
+            }
+        }
     });
     gulp.watch("src/*.scss", ['sass']);
     gulp.watch("src/*.pug", ['pug']);

@@ -729,3 +729,10 @@ a.dark, .dark a {
 
 .m-10 {
   margin: 10rem !important; }
+
+@media only screen and (max-with: 520px) {
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }

@@ -22,6 +22,7 @@ $colors:
   danger tomato,
   ghost ghostwhite,
   dark #333;
+$small: 520px;
 
 //GLOBALS
 body *:not(script) {
@@ -163,5 +164,12 @@ $list: 'p' 'padding', 'm' 'margin';
             #{nth($prop, 2)}: #{$i}rem $I;
         }
     }    
+}
+
+//BREAKPOINTS
+@media only screen and (max-with: $small){
+  .row {
+    flex-direction: column;
+  }
 }
 //END

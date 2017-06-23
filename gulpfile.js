@@ -18,9 +18,7 @@ gulp.task('sass', function() {
 
 gulp.task('pug', function buildHTML() {
     return gulp.src('src/*.pug')
-        .pipe(pug({
-            // Your options in here. 
-        }))
+        .pipe(pug())
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.stream());
 });

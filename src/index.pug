@@ -16,7 +16,7 @@ html(lang="en")
     section.row.bg-danger.p-5.center
       h1 FleXGH Documentation
     section.row
-      aside.col.size-1.end.danger
+      aside.col.size-1.end.danger.br
         nav.row
           ul.col
             each val in ['intro', 'position', 'space', 'grid', 'list', 'text', 'color', 'links', 'header', 'responsive']
@@ -24,13 +24,14 @@ html(lang="en")
               li
                 a(href=link)=val
       article.col.size-10
-        section#intro
+        section#intro.col
           header.col
             sumary.row Intro
-            detail.row.muted Flex everything!
-          main
+            detail.row.pb-1.bb.muted Flex everything!
+          main.row
+            p paragraph
           footer
     section
     footer.col.center
       nav
-        small.bg-dark.ghost.wrap flexgh - going horse on flex-box
+        small.bg-dark.ghost.wrap flexgh - going :horse: on flex-box

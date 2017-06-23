@@ -7,12 +7,12 @@ Sites:  > http://flexgh.us> https://github.com/flexgh
 Created: 06.2017
 */
 body *:not(script) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 0 !important;
   margin: 0 !important; }
 
@@ -131,6 +131,29 @@ a.dark,
   background-color: #333 !important;
   color: ghostwhite !important; }
 
+.b {
+  border: solid 1px !important; }
+
+.bt {
+  border-top: solid 1px !important; }
+
+.bl {
+  border-left: solid 1px !important; }
+
+.bb {
+  border-bottom: solid 1px !important; }
+
+.br {
+  border-right: solid 1px !important; }
+
+.by {
+  border-top: solid 1px !important;
+  border-bottom: solid 1px !important; }
+
+.bx {
+  border-left: solid 1px !important;
+  border-right: solid 1px !important; }
+
 .strong {
   font-weight: 700 !important; }
 
@@ -139,6 +162,23 @@ a.dark,
 
 .wrap {
   padding: 0.5rem !important; }
+
+.col {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+  margin: 1rem 0 !important; }
+
+.row {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  -webkit-box-align: baseline !important;
+      -ms-flex-align: baseline !important;
+          align-items: baseline !important;
+  padding: 0 1rem !important; }
 
 .col .size-0,
 .row .size-0 {
@@ -219,23 +259,6 @@ a.dark,
   -webkit-box-pack: end !important;
       -ms-flex-pack: end !important;
           justify-content: flex-end !important; }
-
-.col {
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-      -ms-flex-direction: column !important;
-          flex-direction: column !important;
-  margin: 1rem 0 !important; }
-
-.row {
-  -webkit-box-orient: horizontal !important;
-  -webkit-box-direction: normal !important;
-      -ms-flex-direction: row !important;
-          flex-direction: row !important;
-  -webkit-box-align: baseline !important;
-      -ms-flex-align: baseline !important;
-          align-items: baseline !important;
-  padding: 0 1rem !important; }
 
 .onlylarge {
   display: inherit !important; }

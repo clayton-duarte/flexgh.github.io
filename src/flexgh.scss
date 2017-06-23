@@ -16,12 +16,11 @@ warning gold,
 danger tomato,
 ghost ghostwhite,
 dark #333;
-$small: "max-width: 420px"; 
-
+$small: "max-width: 420px";
 //GLOBALS
 body *:not(script) {
-  display: flex;
   flex: 1 1 auto;
+  display: flex;
   padding: 0 $I;
   margin: 0 $I;
 }
@@ -89,7 +88,25 @@ header detail {
     background-color: #{nth($c, 2)} $I;
     color: ghostwhite $I;
   }
-} //etc
+}
+
+//borders
+$borders: (b (border)),
+(bt (border-top)),
+(bl (border-left)),
+(bb (border-bottom)),
+(br (border-right)),
+(by (border-top, border-bottom)),
+(bx (border-left, border-right));
+@each $case in $borders {
+  .#{nth($case, 1)} {
+    @each $prop in nth($case, 2) {
+      #{$prop}: solid 1px $I;
+    }
+  }
+}
+
+//etc
 .strong {
   font-weight: 700 $I;
 }
@@ -100,7 +117,21 @@ header detail {
 
 .wrap {
   padding: .5rem $I;
-} //grid
+}
+
+//cols and rows
+.col {
+  flex-direction: column $I;
+  margin: 1rem 0 $I;
+}
+
+.row {
+  flex-direction: row $I;
+  align-items: baseline $I;
+  padding: 0 1rem $I;
+}
+
+//grid
 .col,
 .row {
   @for $i from 0 through 10 {
@@ -120,17 +151,6 @@ header detail {
 
 .end * {
   justify-content: flex-end $I;
-}
-
-.col {
-  flex-direction: column $I;
-  margin: 1rem 0 $I;
-}
-
-.row {
-  flex-direction: row $I;
-  align-items: baseline $I;
-  padding: 0 1rem $I;
 }
 
 .onlylarge {

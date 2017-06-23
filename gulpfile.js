@@ -2,14 +2,14 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer');
-    postcss = require('postcss-scss');
-    pug = require('gulp-pug');
-    browserSync = require('browser-sync').create();
+postcss = require('postcss-scss');
+pug = require('gulp-pug');
+browserSync = require('browser-sync').create();
 
 //TASKS
 
-gulp.task('sass', function() {
-     return gulp.src('src/flexgh.scss')
+gulp.task('sass', function () {
+    return gulp.src('src/flexgh.scss')
         .pipe(sass())
         .pipe(autoprefixer('last 2 version'))
         .pipe(gulp.dest('dist/css'))
@@ -25,7 +25,8 @@ gulp.task('pug', function buildHTML() {
 
 gulp.task('serve', ['sass', 'pug'], function () {
     browserSync.init({
-        server: "dist"
+        server: "dist",
+        browser: "opera"
     });
     gulp.watch("src/*.scss", ['sass']);
     gulp.watch("src/*.pug", ['pug']);

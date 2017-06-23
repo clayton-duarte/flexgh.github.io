@@ -1,13 +1,10 @@
 /*
-> #fleXGH#
-> Author: Clayton Duarte
-> Organization: fleXGH
-> Contributors:
-  > Clayton Duarte :ant:
-> Sites:  
-  > http://flexgh.us
-  > https://github.com/flexgh
-> Created: 06.2017
+#fleXGH#
+Author: Clayton Duarte
+Organization: fleXGH
+Contributors:> Clayton Duarte :ant:
+Sites:  > http://flexgh.us> https://github.com/flexgh
+Created: 06.2017
 */
 body *:not(script) {
   display: -webkit-box;
@@ -25,20 +22,31 @@ body {
   font-size: 20px;
   background: ghostwhite; }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: .5rem;
   font-weight: normal; }
 
-a, button {
+a,
+button {
   color: #333 !important; }
 
-a:focus, a:active, a:visited {
+a:focus,
+a:active,
+a:visited {
   opacity: 0.9 !important; }
 
-a:hover, button:hover {
+a:hover,
+button:hover {
   opacity: 0.7 !important; }
 
-ul, ol {
+ul,
+ol {
   list-style: none; }
 
 hr {
@@ -55,7 +63,8 @@ header detail {
   color: limegreen !important;
   border-color: limegreen !important; }
 
-a.success, .success a {
+a.success,
+.success a {
   color: limegreen !important; }
 
 .bg-success {
@@ -66,7 +75,8 @@ a.success, .success a {
   color: royalblue !important;
   border-color: royalblue !important; }
 
-a.info, .info a {
+a.info,
+.info a {
   color: royalblue !important; }
 
 .bg-info {
@@ -77,7 +87,8 @@ a.info, .info a {
   color: gold !important;
   border-color: gold !important; }
 
-a.warning, .warning a {
+a.warning,
+.warning a {
   color: gold !important; }
 
 .bg-warning {
@@ -88,7 +99,8 @@ a.warning, .warning a {
   color: tomato !important;
   border-color: tomato !important; }
 
-a.danger, .danger a {
+a.danger,
+.danger a {
   color: tomato !important; }
 
 .bg-danger {
@@ -99,7 +111,8 @@ a.danger, .danger a {
   color: ghostwhite !important;
   border-color: ghostwhite !important; }
 
-a.ghost, .ghost a {
+a.ghost,
+.ghost a {
   color: ghostwhite !important; }
 
 .bg-ghost {
@@ -110,7 +123,8 @@ a.ghost, .ghost a {
   color: #333 !important;
   border-color: #333 !important; }
 
-a.dark, .dark a {
+a.dark,
+.dark a {
   color: #333 !important; }
 
 .bg-dark {
@@ -126,57 +140,68 @@ a.dark, .dark a {
 .wrap {
   padding: 0.5rem !important; }
 
-.col .size-0, .row .size-0 {
+.col .size-0,
+.row .size-0 {
   -webkit-box-flex: 0 !important;
       -ms-flex: 0 1 auto !important;
           flex: 0 1 auto !important; }
 
-.col .size-1, .row .size-1 {
+.col .size-1,
+.row .size-1 {
   -webkit-box-flex: 1 !important;
       -ms-flex: 1 1 auto !important;
           flex: 1 1 auto !important; }
 
-.col .size-2, .row .size-2 {
+.col .size-2,
+.row .size-2 {
   -webkit-box-flex: 2 !important;
       -ms-flex: 2 1 auto !important;
           flex: 2 1 auto !important; }
 
-.col .size-3, .row .size-3 {
+.col .size-3,
+.row .size-3 {
   -webkit-box-flex: 3 !important;
       -ms-flex: 3 1 auto !important;
           flex: 3 1 auto !important; }
 
-.col .size-4, .row .size-4 {
+.col .size-4,
+.row .size-4 {
   -webkit-box-flex: 4 !important;
       -ms-flex: 4 1 auto !important;
           flex: 4 1 auto !important; }
 
-.col .size-5, .row .size-5 {
+.col .size-5,
+.row .size-5 {
   -webkit-box-flex: 5 !important;
       -ms-flex: 5 1 auto !important;
           flex: 5 1 auto !important; }
 
-.col .size-6, .row .size-6 {
+.col .size-6,
+.row .size-6 {
   -webkit-box-flex: 6 !important;
       -ms-flex: 6 1 auto !important;
           flex: 6 1 auto !important; }
 
-.col .size-7, .row .size-7 {
+.col .size-7,
+.row .size-7 {
   -webkit-box-flex: 7 !important;
       -ms-flex: 7 1 auto !important;
           flex: 7 1 auto !important; }
 
-.col .size-8, .row .size-8 {
+.col .size-8,
+.row .size-8 {
   -webkit-box-flex: 8 !important;
       -ms-flex: 8 1 auto !important;
           flex: 8 1 auto !important; }
 
-.col .size-9, .row .size-9 {
+.col .size-9,
+.row .size-9 {
   -webkit-box-flex: 9 !important;
       -ms-flex: 9 1 auto !important;
           flex: 9 1 auto !important; }
 
-.col .size-10, .row .size-10 {
+.col .size-10,
+.row .size-10 {
   -webkit-box-flex: 10 !important;
       -ms-flex: 10 1 auto !important;
           flex: 10 1 auto !important; }
@@ -212,17 +237,11 @@ a.dark, .dark a {
           align-items: baseline !important;
   padding: 0 1rem !important; }
 
-.onlysmall {
-  display: inherit !important; }
-  @media only screen and (min-width: 520px) {
-    .onlysmall {
-      display: none !important; } }
-
 .onlylarge {
+  display: inherit !important; }
+
+.onlysmall {
   display: none !important; }
-  @media only screen and (min-width: 520px) {
-    .onlylarge {
-      display: inherit !important; } }
 
 .pt-0 {
   padding-top: 0rem !important; }
@@ -730,9 +749,13 @@ a.dark, .dark a {
 .m-10 {
   margin: 10rem !important; }
 
-@media only screen and (max-with: 520px) {
+@media only screen and (max-width: 420px) {
   .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; } }
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important; }
+  .onlylarge {
+    display: none !important; }
+  .onlysmall {
+    display: inherit !important; } }

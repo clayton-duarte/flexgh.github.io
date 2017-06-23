@@ -20,8 +20,8 @@ html(lang="en")
         nav.row
           ul.col
             each val in ['intro', 'position', 'space', 'grid', 'list', 'text', 'color', 'links', 'header', 'flex then all']
+              -var link = '#' + val;
               li
-              - var link = '#' + val;
                 a(href=link)=val
       article.col.size-10
         section#intro

@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
+    title FleXGH Documentation
+    link(rel="icon" type="image/x-icon" href="assets/Horse.png")
+    link(rel='stylesheet' href='css/flexgh.css')
+  body.y
+    header.y.wrap.bg-dark
+      nav.small.x.white.center
+        a.x._1.start(href='#')
+          img.wrap.py-0(src='assets/Horse.png' height='25')
+          strong.danger fleXGH
+        ul.medium.x._10.center
+          each val in ['Install', 'Docs', 'Author', 'Contact']
+            li.bl.stretch
+              a(href='#')=val

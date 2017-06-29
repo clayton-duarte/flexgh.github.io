@@ -1,0 +1,16 @@
+aside.y._1.end.danger.br
+    nav.x
+        ul.y
+            each val in ['intro', 'position', 'space', 'grid', 'list', 'text', 'color', 'borders', 'links', 'img', 'header', 'responsive']
+                -var link = '#' + val;
+                li.stretch
+                    a(href=link)=val
+article.y._10
+    section#intro.y
+        header.y.bb.pb-1
+            sumary.x Intro
+            detail.x.muted Flex everything!
+        main.x
+            p paragraph
+        footer.x
+            img(src='assets/Horse.png')

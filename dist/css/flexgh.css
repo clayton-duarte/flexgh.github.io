@@ -1,12 +1,15 @@
 body *:not(script) {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   padding: 0 !important;
   margin: 0 !important; }
+
+img {
+  display: inline-block; }
 
 body {
   font-family: 'Ubuntu', sans-serif;

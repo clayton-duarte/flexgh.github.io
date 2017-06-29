@@ -3,11 +3,13 @@ html(lang="en")
   head
     meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
     title FleXGH Documentation
-    link(href='css/flexgh.css' rel='stylesheet')
+    link(rel="icon" type="image/x-icon" href="assets/Horse.png")
+    link(rel='stylesheet' href='css/flexgh.css')
   body.col
     header.col.wrap.bg-dark
       nav.small.row.ghost.center
         a.row.strong.size-1.start(href='#')
+          img(href='assets/Horse.png')
           strong.danger fleXGH
         ul.medium.row.size-10.center
           each val in ['Install', 'Docs', 'Author', 'Contact']
@@ -31,6 +33,7 @@ html(lang="en")
           main.row
             p paragraph
           footer
+            img(href='assets/Horse.png')
     section
     footer.col.center
       nav

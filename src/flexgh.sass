@@ -9,7 +9,9 @@
 //SETUP
 $I: !important;
 $transition: .3s ease;
-$colors: success limegreen, info royalblue, warning gold, danger tomato, ghost ghostwhite, dark #333;
+$colors: 'success' limegreen, 'info' royalblue, 'warning' gold, 'danger' tomato, 'white' #FFF, 'dark' #333;
+$borders: (b (border)),  (bt (border-top)),  (bl (border-left)),  (bb (border-bottom)),  (br (border-right)),  (by (border-top, border-bottom)),  (bx (border-left, border-right))
+$breakpoints: ('small' "max-width:320px"), ('medium' "max-width:768px"), ('large' "max-width:1024px")
 
 //GLOBALS
 body *:not(script)
@@ -25,38 +27,29 @@ body
   background: ghostwhite
 
 //texts
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
+p,h1,h2,h3,h4,h5,h6
   margin-bottom: .5rem
   font-weight: normal
 
 //links
-a,
-button
+a,button
   color: #333 $I
 
-a:focus,
-a:active,
-a:visited
+a:focus,a:active,a:visited
   opacity: .9 $I
 
-a:hover,
-button:hover
+a:hover,button:hover
   opacity: .7 $I
 
-ul,
-ol
+//etc
+ul,ol
   list-style: none
 
 hr
   border: 0
   border-bottom: 1px solid #333
 
+//header
 header sumary
   font-size: 2rem
 
@@ -76,20 +69,15 @@ header detail
 
   .bg-#{nth($c, 1)}
     background-color: #{nth($c, 2)} $I
-    color: ghostwhite $I
+    color: white $I
 
 //borders
-$borders: ((b (border)),  (bt (border-top)),  (bl (border-left)),  (bb (border-bottom)),  (br (border-right)),  (by (border-top, border-bottom)),  (bx (border-left, border-right)))
-
 @each $case in $borders
   .#{nth($case, 1)}
     @each $prop in nth($case, 2)
       #{$prop}: solid 1px $I
 
 //etc
-.strong
-  font-weight: 700 $I
-
 .muted
   opacity: .5 $I
 
@@ -97,31 +85,34 @@ $borders: ((b (border)),  (bt (border-top)),  (bl (border-left)),  (bb (border-b
   padding: .5rem $I
 
 //cols and rows
-.col
+.y
   flex-direction: column $I
   margin: 1rem 0 $I
 
-.row
+.x
   flex-direction: row $I
   padding: 0 1rem $I
   > * 
     align-self: center
 
 //grid
-.col,
-.row
+.y,.x
   @for $i from 0 through 10
     .size-#{$i}
       flex: #{$i} 1 auto $I
 
+//align
 .center *
   justify-content: space-around $I
+  text-align: center
 
 .start *
   justify-content: flex-start $I
+  text-align: left
 
 .end *
   justify-content: flex-end $I
+  text-align: right
 
 .stretch 
   align-self: stretch $I
@@ -130,7 +121,7 @@ $borders: ((b (border)),  (bt (border-top)),  (bl (border-left)),  (bb (border-b
 $list: 'p' 'padding', 'm' 'margin'
 
 @each $prop in $list
-  @for $i from 0 through 10
+  @for $i from 0 through 5
     //top
     .#{nth($prop, 1)}t-#{$i}
       #{nth($prop, 2)}-top: #{$i}rem $I
@@ -165,11 +156,9 @@ img
   max-width: 100%
 
 //breakpoints
-$breakpoints: ('small' "max-width:320px"), ('medium' "max-width:768px"), ('large' "max-width:1024px")
-
 @each $display in $breakpoints
   @media only screen and (#{nth($display, 2)})
-    .#{nth($display, 1)}.row
+    .#{nth($display, 1)}.x
       flex-direction: column $I
       *:not(img)
         flex: 1 1 auto $I

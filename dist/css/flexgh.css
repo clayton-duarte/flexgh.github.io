@@ -1,11 +1,3 @@
-/*
-#fleXGH#
-Author: Clayton Duarte
-Organization: fleXGH
-Contributors:> Clayton Duarte :ant:
-Sites:  > http://flexgh.us> https://github.com/flexgh
-Created: 06.2017
-*/
 body *:not(script) {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -158,22 +150,10 @@ a.dark,
   font-weight: 700 !important; }
 
 .muted {
-  opacity: 0.7 !important; }
+  opacity: 0.5 !important; }
 
 .wrap {
   padding: 0.5rem !important; }
-
-header.topfixed {
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0; }
-
-header.bottomfixed {
-  position: fixed;
-  right: 0;
-  left: 0;
-  bottom: 0; }
 
 .col {
   -webkit-box-orient: vertical !important;
@@ -256,11 +236,6 @@ header.bottomfixed {
           flex: 10 1 auto !important; }
 
 .center * {
-  -webkit-box-pack: center !important;
-      -ms-flex-pack: center !important;
-          justify-content: center !important; }
-
-.around * {
   -ms-flex-pack: distribute !important;
       justify-content: space-around !important; }
 

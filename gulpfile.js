@@ -9,7 +9,7 @@ browserSync = require('browser-sync').create();
 //TASKS
 
 gulp.task('sass', function () {
-    return gulp.src('src/flexgh.scss')
+    return gulp.src('src/flexgh.sass')
         .pipe(sass())
         .pipe(autoprefixer('last 2 version'))
         .pipe(gulp.dest('dist/css'))

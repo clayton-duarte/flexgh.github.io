@@ -1,18 +1,22 @@
-body *:not(script) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  padding: 0 !important;
-  margin: 0 !important; }
-
 body {
   font-family: 'Ubuntu', sans-serif;
   color: #333;
   font-size: 20px;
-  background: ghostwhite; }
+  background: smokewhite; }
+
+body *:not(script) {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 !important;
+  margin: 0 !important; }
 
 p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
@@ -89,15 +93,15 @@ a.danger,
   color: white !important; }
 
 .white {
-  color: #FFF !important;
-  border-color: #FFF !important; }
+  color: whitesmoke !important;
+  border-color: whitesmoke !important; }
 
 a.white,
 .white a {
-  color: #FFF !important; }
+  color: whitesmoke !important; }
 
 .bg-white {
-  background-color: #FFF !important;
+  background-color: whitesmoke !important;
   color: white !important; }
 
 .dark {
@@ -158,57 +162,57 @@ a.dark,
     -ms-flex-item-align: center;
         align-self: center; }
 
-.y .size-0, .x .size-0 {
+.y ._0, .x ._0 {
   -webkit-box-flex: 0 !important;
       -ms-flex: 0 1 auto !important;
           flex: 0 1 auto !important; }
 
-.y .size-1, .x .size-1 {
+.y ._1, .x ._1 {
   -webkit-box-flex: 1 !important;
       -ms-flex: 1 1 auto !important;
           flex: 1 1 auto !important; }
 
-.y .size-2, .x .size-2 {
+.y ._2, .x ._2 {
   -webkit-box-flex: 2 !important;
       -ms-flex: 2 1 auto !important;
           flex: 2 1 auto !important; }
 
-.y .size-3, .x .size-3 {
+.y ._3, .x ._3 {
   -webkit-box-flex: 3 !important;
       -ms-flex: 3 1 auto !important;
           flex: 3 1 auto !important; }
 
-.y .size-4, .x .size-4 {
+.y ._4, .x ._4 {
   -webkit-box-flex: 4 !important;
       -ms-flex: 4 1 auto !important;
           flex: 4 1 auto !important; }
 
-.y .size-5, .x .size-5 {
+.y ._5, .x ._5 {
   -webkit-box-flex: 5 !important;
       -ms-flex: 5 1 auto !important;
           flex: 5 1 auto !important; }
 
-.y .size-6, .x .size-6 {
+.y ._6, .x ._6 {
   -webkit-box-flex: 6 !important;
       -ms-flex: 6 1 auto !important;
           flex: 6 1 auto !important; }
 
-.y .size-7, .x .size-7 {
+.y ._7, .x ._7 {
   -webkit-box-flex: 7 !important;
       -ms-flex: 7 1 auto !important;
           flex: 7 1 auto !important; }
 
-.y .size-8, .x .size-8 {
+.y ._8, .x ._8 {
   -webkit-box-flex: 8 !important;
       -ms-flex: 8 1 auto !important;
           flex: 8 1 auto !important; }
 
-.y .size-9, .x .size-9 {
+.y ._9, .x ._9 {
   -webkit-box-flex: 9 !important;
       -ms-flex: 9 1 auto !important;
           flex: 9 1 auto !important; }
 
-.y .size-10, .x .size-10 {
+.y ._10, .x ._10 {
   -webkit-box-flex: 10 !important;
       -ms-flex: 10 1 auto !important;
           flex: 10 1 auto !important; }

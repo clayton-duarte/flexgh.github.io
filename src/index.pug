@@ -8,24 +8,24 @@ html(lang="en")
   body.y
     header.y.wrap.bg-dark
       nav.small.x.white.center
-        a.x.size-1.start(href='#')
+        a.x._1.start(href='#')
           img.wrap.py-0(src='assets/Horse.png' height='25')
           strong.danger fleXGH
-        ul.medium.x.size-10.center
+        ul.medium.x._10.center
           each val in ['Install', 'Docs', 'Author', 'Contact']
             li.bl.stretch
               a(href='#')=val
     section.hidesmall.x.bg-danger.p-5.center
       h1 FleXGH Documentation
     section.small.x
-      aside.y.size-1.end.danger.br
+      aside.y._1.end.danger.br
         nav.x
           ul.y
             each val in ['intro', 'position', 'space', 'grid', 'list', 'text', 'color', 'borders', 'links', 'img', 'header', 'responsive']
               -var link = '#' + val;
               li.stretch
                 a(href=link)=val
-      article.y.size-10
+      article.y._10
         section#intro.y
           header.y.bb.pb-1
             sumary.x Intro
@@ -36,5 +36,5 @@ html(lang="en")
             img(src='assets/Horse.png')
     section
     footer.y.center
-      nav
-        small.bg-dark.white.wrap flexgh - going :horse: on flex-box
+      nav.x.bg-dark
+        small.white.wrap flexgh - going :horse: on flex-box

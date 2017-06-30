@@ -167,9 +167,6 @@ a.dark,
       -ms-flex-direction: row !important;
           flex-direction: row !important;
   padding: 0 1rem !important; }
-  .x > * {
-    -ms-flex-item-align: center;
-        align-self: center; }
 
 .y ._0, .x ._0 {
   -webkit-box-flex: 0 !important;

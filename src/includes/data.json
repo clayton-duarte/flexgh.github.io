@@ -2,12 +2,21 @@
     [
         {
             "title": "intro",
-            "resume": "flex everything!",
+            "resume": "flex all this sh**t!",
+            "ps": [ 
+                "It's extremely simple, just worry about the direction and flow of your page.",
+                "It's extremely simple, just worry about the direction and flow of your page."
+            ],
+            "updated": "2017-06-30"
+        },
+        {
+            "title": "grid",
+            "resume": "it's just flow",
             "ps": [ 
                 "Its extremely simple, just worry about the direction and flow of your page.",
                 "Its extremely simple, just worry about the direction and flow of your page."
             ],
-            "others": "end"
+            "updated": "2017-06-30"
         }
     ]
 }

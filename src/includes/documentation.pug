@@ -1,11 +1,12 @@
 //- menu
-aside.y._1.end.danger.br
+aside.y._1.danger.br
     nav.x
-        ul.y
+        ul.y.end
             each feat in Docs
                 -var link = '#' + feat.title;
-                li.stretch
+                li._0
                     a.Txt(href=link)=feat.title
+    img(src='assets/Horse.png').wrap
 //- data
 article.y._10
     each feat in Docs
@@ -18,4 +19,5 @@ article.y._10
                 each p in feat.ps
                     p.x=p
             footer.y
-                .TXT.x=feat.others
+                small.TXT.x.muted Last Update:
+                    strong=feat.updated

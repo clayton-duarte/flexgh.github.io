@@ -2,20 +2,101 @@
     [
         {
             "title": "intro",
-            "resume": "flex all this sh**t!",
+            "resume": "flex all this sh**t",
             "ps": [ 
                 "It's extremely simple, just worry about the direction and flow of your page.",
-                "It's extremely simple, just worry about the direction and flow of your page."
+                "Forgot about display definitions like block, inline, inline-block, etc. Everithing is FLEXible."
             ],
+            "list": [],
             "updated": "2017-06-30"
         },
         {
             "title": "grid",
             "resume": "it's just flow",
             "ps": [ 
+                "The fleXGH grid is quite simple, just think about the direction of your element on the page.",
+                "By default, every element is a column if its grid class is omitted"
+            ],
+            "list": [
+                ".x: If it's horizontal or has itens side by side, is a row;",
+                ".y: Otherwhise, if is vertical or has a vertical content, is a column;",
+                ".center: This class centralize the inner elements, putting space around them;",
+                ".start: This one pull the inner elements to the start. The left if it's a row. The top if it's a column;",
+                ".end: The opposite of the above, pulling the inner elements to the end. In this case the bottom in columns or the right in rows;",
+                ".strech: It's like the name, this class stretch the element to fill all the available space in his father."
+            ],
+            "updated": "2017-06-30"
+        },
+        {
+            "title": "texts",
+            "resume": "content is everything",
+            "ps": [ 
                 "Its extremely simple, just worry about the direction and flow of your page.",
                 "Its extremely simple, just worry about the direction and flow of your page."
             ],
+            "list": [
+                ".txt: forces the text to lowercase;",
+                ".Txt: capitalize the text;",
+                ".TXT: uppercase all the characters."
+                
+            ],
+            "updated": "2017-06-30"
+        },
+        {
+            "title": "colors",
+            "resume": "because we need",
+            "ps": [ 
+                "Its extremely simple, just worry about the direction and flow of your page.",
+                "Its extremely simple, just worry about the direction and flow of your page."
+            ],
+            "list": [
+                ".muted:",
+                ".info:",
+                ".success:",
+                ".warning:",
+                ".danger",
+                ".bg-$color:"
+            ],
+            "updated": "2017-06-30"
+        },
+        {
+            "title": "Borders",
+            "resume": "because we need [too]",
+            "ps": [ 
+                "Its extremely simple, just worry about the direction and flow of your page.",
+                "Its extremely simple, just worry about the direction and flow of your page."
+            ],
+            "list": [
+                ".bt:",
+                ".bl:",
+                ".bb:",
+                ".br:",
+                ".by",
+                ".bx:"
+            ],
+            "updated": "2017-06-30"
+        },
+        {
+            "title": "spaces",
+            "resume": "little adjustments",
+            "ps": [ 
+                "Its extremely simple, just worry about the direction and flow of your page.",
+                "Its extremely simple, just worry about the direction and flow of your page."
+            ],
+            "list": [
+                ".m",
+                ".p"
+            ],
+            "updated": "2017-06-30"
+        },
+        {
+            "title": "responsive",
+            "resume": "we are mobile",
+            "ps": [ 
+                "Its extremely simple, just worry about the direction and flow of your page.",
+                "Its extremely simple, just worry about the direction and flow of your page."
+            ],
+            "list": [],
             "updated": "2017-06-30"
         }
     ]

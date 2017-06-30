@@ -1,0 +1,30 @@
+.wrap
+  padding: .5rem $I
+
+$list: 'p' 'padding', 'm' 'margin'
+
+@each $prop in $list
+  @for $i from 0 through 5
+    //top
+    .#{nth($prop, 1)}t-#{$i}
+      #{nth($prop, 2)}-top: #{$i}rem $I
+    //bottom
+    .#{nth($prop, 1)}b-#{$i}
+      #{nth($prop, 2)}-bottom: #{$i}rem $I
+    //left
+    .#{nth($prop, 1)}l-#{$i}
+      #{nth($prop, 2)}-left: #{$i}rem $I
+    //right
+    .#{nth($prop, 1)}r-#{$i}
+      #{nth($prop, 2)}-right: #{$i}rem $I
+    // x-axis
+    .#{nth($prop, 1)}x-#{$i}
+      #{nth($prop, 2)}-left: #{$i}rem $I
+      #{nth($prop, 2)}-right: #{$i}rem $I
+    // y-axis
+    .#{nth($prop, 1)}y-#{$i}
+      #{nth($prop, 2)}-top: #{$i}rem $I
+      #{nth($prop, 2)}-bottom: #{$i}rem $I
+    // all!
+    .#{nth($prop, 1)}-#{$i}
+      #{nth($prop, 2)}: #{$i}rem $I

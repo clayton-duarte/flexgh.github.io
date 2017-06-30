@@ -1,0 +1,20 @@
+//RESPONSIVES
+
+//img
+img
+  flex-direction: row
+  align-self: center
+  flex: 0 0 auto $I
+  max-width: 100%
+
+//breakpoints
+@each $display in $breakpoints
+  @media only screen and (#{nth($display, 2)})
+    .#{nth($display, 1)}.x
+      flex-direction: column $I
+      *:not(img)
+        flex: 1 1 auto $I
+        align-self: stretch $I
+
+    .hide#{nth($display, 1)}
+      display: none $I

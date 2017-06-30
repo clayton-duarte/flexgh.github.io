@@ -18,6 +18,10 @@ article.y._10
             main.y
                 each p in feat.ps
                     p.x=p
+                small.pl-1.danger
+                    .mb-1 Classes:
+                    each item in feat.list
+                        p.pl-1.dark.x=item
             footer.y
                 small.TXT.x.muted Last Update:
                     strong=feat.updated

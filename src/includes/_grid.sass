@@ -1,0 +1,27 @@
+.y
+  flex-direction: column $I
+  margin: 1rem 0 $I
+
+.x
+  flex-direction: row $I
+  padding: 0 1rem $I
+
+.y,.x
+  @for $i from 0 through 10
+    ._#{$i}
+      flex: #{$i} 1 auto $I
+
+.center *
+  justify-content: space-around $I
+  text-align: center
+
+.start *
+  justify-content: flex-start $I
+  text-align: left
+
+.end *
+  justify-content: flex-end $I
+  text-align: right
+
+.stretch 
+  align-self: stretch $I

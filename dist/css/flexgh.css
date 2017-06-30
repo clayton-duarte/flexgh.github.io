@@ -1,3 +1,10 @@
+/*
+  * #fleXGH#
+  * Author: Clayton Duarte
+  * Organization: fleXGH
+  * Contributors: Clayton Duarte :ant:
+  * Sites: http://flexgh.us
+  * Created: 2017-06-13 */
 body {
   font-family: 'Ubuntu', sans-serif;
   color: #333;
@@ -16,7 +23,12 @@ body *:not(script) {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  list-style: none; }
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #333; }
 
 p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem !important;
@@ -40,18 +52,14 @@ a:focus, a:active, a:visited {
 a:hover, button:hover {
   opacity: 0.7 !important; }
 
-ul, ol {
-  list-style: none; }
-
-hr {
-  border: 0;
-  border-bottom: 1px solid #333; }
-
 header sumary {
   font-size: 2rem; }
 
 header detail {
   opacity: .7; }
+
+.muted {
+  opacity: 0.5 !important; }
 
 .success {
   color: limegreen !important;
@@ -148,12 +156,6 @@ a.dark,
   border-left: solid 1px !important;
   border-right: solid 1px !important; }
 
-.muted {
-  opacity: 0.5 !important; }
-
-.wrap {
-  padding: 0.5rem !important; }
-
 .y {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
@@ -243,6 +245,9 @@ a.dark,
 .stretch {
   -ms-flex-item-align: stretch !important;
       align-self: stretch !important; }
+
+.wrap {
+  padding: 0.5rem !important; }
 
 .pt-0 {
   padding-top: 0rem !important; }

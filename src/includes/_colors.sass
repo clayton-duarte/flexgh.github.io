@@ -1,0 +1,20 @@
+.muted
+  opacity: .5 $I
+
+@each $c in $colors
+  .#{nth($c, 1)}
+    color: #{nth($c, 2)} $I
+    border-color: #{nth($c, 2)} $I
+
+  a.#{nth($c, 1)},
+  .#{nth($c, 1)} a
+    color: #{nth($c, 2)} $I
+
+  .bg-#{nth($c, 1)}
+    background-color: #{nth($c, 2)} $I
+    color: white $I
+
+@each $case in $borders
+  .#{nth($case, 1)}
+    @each $prop in nth($case, 2)
+      #{$prop}: solid 1px $I

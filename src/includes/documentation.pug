@@ -1,16 +1,21 @@
+//- menu
 aside.y._1.end.danger.br
     nav.x
         ul.y
-            each val in ['intro', 'position', 'space', 'grid', 'list', 'text', 'color', 'borders', 'links', 'img', 'header', 'responsive']
-                -var link = '#' + val;
+            each feat in Docs
+                -var link = '#' + feat.title;
                 li.stretch
-                    a(href=link)=val
+                    a.Txt(href=link)=feat.title
+//- data
 article.y._10
-    section#intro.y
-        header.y.bb.pb-1
-            sumary.x Intro
-            detail.x.muted Flex everything!
-        main.x
-            p paragraph
-        footer.x
-            img(src='assets/Horse.png')
+    each feat in Docs
+        section(id=feat.title).y
+            header.y
+                sumary.Txt.x=feat.title
+                detail.Txt.x.muted=feat.resume
+            .bb.danger
+            main.y
+                each p in feat.ps
+                    p.x=p
+            footer.y
+                .TXT.x=feat.others

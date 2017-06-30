@@ -24,13 +24,20 @@ body *:not(script)
   display: flex $I
   flex: 1 1 auto
   flex-direction: column
-  padding: 0 $I
-  margin: 0 $I
+  padding: 0
+  margin: 0
 
 //texts
 p,h1,h2,h3,h4,h5,h6
-  margin-bottom: .5rem
+  margin-bottom: 1rem $I
   font-weight: normal
+
+.txt
+  text-transform: lowercase
+.Txt
+  text-transform: capitalize
+.TXT
+  text-transform: uppercase
 
 //links
 a,button

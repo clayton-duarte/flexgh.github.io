@@ -1,12 +1,13 @@
-{
-    {
-        
-    }
+{"Docs":
+    [
+        {
+            "title": "intro",
+            "resume": "flex everything!",
+            "ps": [ 
+                "Its extremely simple, just worry about the direction and flow of your page.",
+                "Its extremely simple, just worry about the direction and flow of your page."
+            ],
+            "others": "end"
+        }
+    ]
 }
-    title: 'intro',
-    resume: 'flex everything!',
-    text: {
-            'Its extreme simple, just worry about the direction and flow of your page.'
-        },
-        others:'end'
-]

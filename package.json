@@ -10,9 +10,12 @@
     "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
+    "gulp-data": "^1.2.1",
     "gulp-pug": "^3.3.0",
     "gulp-rm": "^1.0.4",
     "gulp-sass": "^3.1.0",
+    "gulp-swig": "^0.8.0",
+    "jsonfile": "^3.0.0",
     "material-design-icons": "^3.0.1",
     "postcss-scss": "^1.0.1"
   },

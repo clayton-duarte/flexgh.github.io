@@ -1,13 +1,19 @@
 //SETUP
 var gulp = require('gulp'),
+    pug = require('gulp-pug');
+    data = require('gulp-data');
+    swig = require('gulp-swig');
+    jsonfile = require('jsonfile')
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer');
-postcss = require('postcss-scss');
-pug = require('gulp-pug');
-browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create();
+
+var myjson = 'src/includes/data.json';
+function getJsonData (file) {
+    return jsonfile.readFileSync(file);
+};
 
 //TASKS
-
 gulp.task('sass', function () {
     return gulp.src('src/flexgh.sass')
         .pipe(sass())
@@ -16,14 +22,16 @@ gulp.task('sass', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('pug', function buildHTML() {
+gulp.task('pug', ['sass'] , function buildHTML() {
     return gulp.src('src/*.pug')
+        .pipe(data(getJsonData(myjson)))
+        .pipe(swig())
         .pipe(pug())
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.stream());
 });
 
-gulp.task('serve', ['sass', 'pug'], function () {
+gulp.task('serve', ['pug'], function () {
     browserSync.init({
         server: {
             baseDir: "dist",
@@ -32,9 +40,8 @@ gulp.task('serve', ['sass', 'pug'], function () {
             }
         }
     });
-    gulp.watch("src/*.sass", ['sass']);
-    gulp.watch("src/*.pug", ['pug']);
-    gulp.watch("dist/*.html")
+    gulp.watch("src/**/*.*", ['pug']);
+    gulp.watch("dist/*.*")
         .on('change', browserSync.reload);
 });
 

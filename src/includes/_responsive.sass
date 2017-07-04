@@ -10,7 +10,7 @@ img
 //breakpoints
 @each $display in $breakpoints
   @media only screen and (#{nth($display, 2)})
-    .#{nth($display, 1)}.x
+    .#{nth($display, 1)}.row
       flex-direction: column $I
       *:not(img)
         flex: 1 1 auto $I

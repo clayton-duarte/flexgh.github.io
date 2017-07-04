@@ -28,7 +28,7 @@ body *:not(script) {
 
 hr {
   border: 0;
-  border-bottom: 1px solid #333; }
+  border-bottom: 1px solid dark #333; }
 
 p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem !important;
@@ -156,71 +156,71 @@ a.dark,
   border-left: solid 1px !important;
   border-right: solid 1px !important; }
 
-.y {
+.col, .y {
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
       -ms-flex-direction: column !important;
           flex-direction: column !important;
   margin: 1rem 0 !important; }
 
-.x {
+.row, .x {
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: normal !important;
       -ms-flex-direction: row !important;
           flex-direction: row !important;
   padding: 0 1rem !important; }
 
-.y ._0, .x ._0 {
+.col ._0, .row ._0, .y ._0, .x ._0 {
   -webkit-box-flex: 0 !important;
       -ms-flex: 0 1 auto !important;
           flex: 0 1 auto !important; }
 
-.y ._1, .x ._1 {
+.col ._1, .row ._1, .y ._1, .x ._1 {
   -webkit-box-flex: 1 !important;
       -ms-flex: 1 1 auto !important;
           flex: 1 1 auto !important; }
 
-.y ._2, .x ._2 {
+.col ._2, .row ._2, .y ._2, .x ._2 {
   -webkit-box-flex: 2 !important;
       -ms-flex: 2 1 auto !important;
           flex: 2 1 auto !important; }
 
-.y ._3, .x ._3 {
+.col ._3, .row ._3, .y ._3, .x ._3 {
   -webkit-box-flex: 3 !important;
       -ms-flex: 3 1 auto !important;
           flex: 3 1 auto !important; }
 
-.y ._4, .x ._4 {
+.col ._4, .row ._4, .y ._4, .x ._4 {
   -webkit-box-flex: 4 !important;
       -ms-flex: 4 1 auto !important;
           flex: 4 1 auto !important; }
 
-.y ._5, .x ._5 {
+.col ._5, .row ._5, .y ._5, .x ._5 {
   -webkit-box-flex: 5 !important;
       -ms-flex: 5 1 auto !important;
           flex: 5 1 auto !important; }
 
-.y ._6, .x ._6 {
+.col ._6, .row ._6, .y ._6, .x ._6 {
   -webkit-box-flex: 6 !important;
       -ms-flex: 6 1 auto !important;
           flex: 6 1 auto !important; }
 
-.y ._7, .x ._7 {
+.col ._7, .row ._7, .y ._7, .x ._7 {
   -webkit-box-flex: 7 !important;
       -ms-flex: 7 1 auto !important;
           flex: 7 1 auto !important; }
 
-.y ._8, .x ._8 {
+.col ._8, .row ._8, .y ._8, .x ._8 {
   -webkit-box-flex: 8 !important;
       -ms-flex: 8 1 auto !important;
           flex: 8 1 auto !important; }
 
-.y ._9, .x ._9 {
+.col ._9, .row ._9, .y ._9, .x ._9 {
   -webkit-box-flex: 9 !important;
       -ms-flex: 9 1 auto !important;
           flex: 9 1 auto !important; }
 
-.y ._10, .x ._10 {
+.col ._10, .row ._10, .y ._10, .x ._10 {
   -webkit-box-flex: 10 !important;
       -ms-flex: 10 1 auto !important;
           flex: 10 1 auto !important; }
@@ -538,46 +538,46 @@ img {
   max-width: 100%; }
 
 @media only screen and (max-width: 320px) {
-  .small.x {
+  .sm.row {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important; }
-    .small.x *:not(img) {
+    .sm.row *:not(img) {
       -webkit-box-flex: 1 !important;
           -ms-flex: 1 1 auto !important;
               flex: 1 1 auto !important;
       -ms-flex-item-align: stretch !important;
           align-self: stretch !important; }
-  .hidesmall {
+  .hidesm {
     display: none !important; } }
 
-@media only screen and (max-width: 768px) {
-  .medium.x {
+@media only screen and (max-width: 769px) {
+  .md.row {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important; }
-    .medium.x *:not(img) {
+    .md.row *:not(img) {
       -webkit-box-flex: 1 !important;
           -ms-flex: 1 1 auto !important;
               flex: 1 1 auto !important;
       -ms-flex-item-align: stretch !important;
           align-self: stretch !important; }
-  .hidemedium {
+  .hidemd {
     display: none !important; } }
 
 @media only screen and (max-width: 1024px) {
-  .large.x {
+  .lg.row {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important; }
-    .large.x *:not(img) {
+    .lg.row *:not(img) {
       -webkit-box-flex: 1 !important;
           -ms-flex: 1 1 auto !important;
               flex: 1 1 auto !important;
       -ms-flex-item-align: stretch !important;
           align-self: stretch !important; }
-  .hidelarge {
+  .hidelg {
     display: none !important; } }

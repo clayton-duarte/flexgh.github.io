@@ -1,12 +1,12 @@
-.y
+.col, .y
   flex-direction: column $I
   margin: 1rem 0 $I
 
-.x
+.row, .x
   flex-direction: row $I
   padding: 0 1rem $I
 
-.y,.x
+.col,.row, .y, .x
   @for $i from 0 through 10
     ._#{$i}
       flex: #{$i} 1 auto $I

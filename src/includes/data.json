@@ -18,14 +18,14 @@
                 "By default, every element is a column if its grid class is omitted"
             ],
             "list": [
-                ".x: If it's horizontal or has itens side by side, is a row;",
-                ".y: Otherwhise, if is vertical or has a vertical content, is a column;",
+                ".row: If it's horizontal or has itens side by side, is a row;",
+                ".col: Otherwhise, if is vertical or has a vertical content, is a column;",
                 ".center: This class centralize the inner elements, putting space around them;",
                 ".start: This one pull the inner elements to the start. The left if it's a row. The top if it's a column;",
                 ".end: The opposite of the above, pulling the inner elements to the end. In this case the bottom in columns or the right in rows;",
                 ".strech: It's like the name, this class stretch the element to fill all the available space in his father."
             ],
-            "updated": "2017-06-30"
+            "updated": "2017-07-04"
         },
         {
             "title": "texts",
@@ -50,31 +50,31 @@
                 "Its extremely simple, just worry about the direction and flow of your page."
             ],
             "list": [
-                ".muted:",
+                ".muted: it just let the content a little transparent;",
                 ".info:",
                 ".success:",
                 ".warning:",
                 ".danger",
-                ".bg-$color:"
+                ".bg-$color: its to set the background color, just choose one of the colors above and bam!"
             ],
-            "updated": "2017-06-30"
+            "updated": "2017-07-03"
         },
         {
             "title": "Borders",
             "resume": "because we need [too]",
             "ps": [ 
-                "Its extremely simple, just worry about the direction and flow of your page.",
-                "Its extremely simple, just worry about the direction and flow of your page."
+                "We can add borders easily just add a couple of classes on the element with this utility.",
+                "By default, the classes below adds 1px solid borders, the color of the border can be earely changed with our color classes."
             ],
             "list": [
-                ".bt:",
-                ".bl:",
-                ".bb:",
-                ".br:",
-                ".by",
-                ".bx:"
+                ".bt: adds border-top",
+                ".bl: adds border-left",
+                ".bb: adds border-bottom",
+                ".br: adds border-right",
+                ".by: adds border on top and bottom",
+                ".bx: adds border on both sides"
             ],
-            "updated": "2017-06-30"
+            "updated": "2017-07-03"
         },
         {
             "title": "spaces",
@@ -84,20 +84,30 @@
                 "Its extremely simple, just worry about the direction and flow of your page."
             ],
             "list": [
-                ".m",
-                ".p"
+                ".[margin or padding][position]-[how much]: It can look a little complex, but is easy to understand. Look some exemples:",
+                ".mx-3: sets margin-left and right (x-axis) equals a 3rem;",
+                ".ml-8: sets margin-left equals a 8rem;",
+                ".py-2: sets padding-botom and top (y-axis) equals a 2rem;",
+                ".pt-4: sets padding-top equals a 4rem;",
+                ".mt-7: sets margin-top equals a 7rem;",
+                ".pr-2: sets padding-right equals a 2rem;",
+                ".mb-0: sets margin-botom equals a 0;"
             ],
-            "updated": "2017-06-30"
+            "updated": "2017-07-03"
         },
         {
             "title": "responsive",
             "resume": "we are mobile",
             "ps": [ 
-                "Its extremely simple, just worry about the direction and flow of your page.",
-                "Its extremely simple, just worry about the direction and flow of your page."
+                "Easy setable breakpoits, just choose where you want to brak and stack everything.",
+                "For now, we have 3 sizes of breakpoints."
             ],
-            "list": [],
-            "updated": "2017-06-30"
+            "list": [
+                ".s: breakpoint on small screens. Such as most of smartphones;",
+                ".m: breakpoint on medium screens. Like tablets and some smartphones too;",
+                ".g: breakpoint on large screens. All desktops and above."
+            ],
+            "updated": "2017-07-03"
         }
     ]
 }

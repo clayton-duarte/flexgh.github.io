@@ -2,7 +2,7 @@ $I: !important;
 $transition: .3s ease;
 $colors: 'success' limegreen, 'info' royalblue, 'warning' gold, 'danger' tomato, 'white' whitesmoke, 'dark' #333;
 $borders: (b (border)),  (bt (border-top)),  (bl (border-left)),  (bb (border-bottom)),  (br (border-right)),  (by (border-top, border-bottom)),  (bx (border-left, border-right))
-$breakpoints: ('small' "max-width:320px"), ('medium' "max-width:768px"), ('large' "max-width:1024px")
+$breakpoints: ('sm' "max-width:320px"), ('md' "max-width:769px"), ('lg' "max-width:1024px")
 
 body
   font-family: 'Ubuntu', sans-serif
@@ -22,4 +22,4 @@ body *:not(script)
 
 hr
   border: 0
-  border-bottom: 1px solid #333
+  border-bottom: 1px solid #{nth($colors, 6)}

@@ -1,27 +1,27 @@
 //- menu
-aside.y._1.danger.br
-    nav.x
-        ul.y.end
+aside.col._1.danger.br
+    nav.row
+        ul.col.end
             each feat in Docs
                 -var link = '#' + feat.title;
                 li._0
                     a.Txt(href=link)=feat.title
     img(src='assets/Horse.png').wrap
 //- data
-article.y._10
+article.col._10
     each feat in Docs
-        section(id=feat.title).y
-            header.y
-                sumary.Txt.x=feat.title
-                detail.Txt.x.muted=feat.resume
+        section(id=feat.title).col
+            header.col
+                sumary.Txt.row=feat.title
+                detail.Txt.row.muted=feat.resume
             .bb.danger
-            main.y
+            main.col
                 each p in feat.ps
-                    p.x=p
+                    p.row=p
                 small.pl-1.danger
                     .mb-1 Classes:
                     each item in feat.list
-                        p.pl-1.dark.x=item
-            footer.y
-                small.TXT.x.muted Last Update:
+                        p.pl-1.dark.row=item
+            footer.col
+                small.TXT.row.muted Last Update:
                     strong=feat.updated
